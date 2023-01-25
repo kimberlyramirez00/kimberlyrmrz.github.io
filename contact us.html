@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<style> 
+body { margin:0;
+        background:url(eme.jpg)no-repeat;
+		background-size:cover;}
+		
+		ul li{ width: 80px;
+		       float:right;
+		       text-align:center;
+		       border:0px solid white;
+		       background-color:transparent;
+		       opacity: 0.8;
+		       font-family: arfal;
+		       padding: 7px;
+		       margin-right:4px;
+	
+	}
+		ul li a{ text-decoration: none;
+		color:white;}
+		.text{background-color:green;}
+		 
+		 li a, .dropbtn {
+		 display: inline block;
+		 text-align: center;
+		 padding: 7 px ;
+		 text-decoration: none;}
+		 
+		ul li:hover{background-color:green;}
+		
+		
+		.dropbtn {
+			background-color:transparent;
+			color: antiquewhite;
+			padding: 8px;
+			border: none;
+			opacity: 0.8;
+			border:0px solid white;
+			margin-right:10px;
+			height: 0.1;
+			font-family: arfal;
+			text-align: center;
+
+		}
+		.dropbtn {
+			position: relative;
+			display: inline-block;
+		
+		}
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			right: 0;
+			background-color: #f5e616;
+			min-width: 90px;
+			box-shadow: 0px 8px 16px 0px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+			margin-right: 10px;
+		}
+
+         .dropdown-content a {
+			color: black;
+			padding: 7px;
+			text-decoration: none;
+			display: block;
+		 }
+		 .dropdown-content a:hover {background-color: #f1f1f1;}
+		 .dropdown:hover .dropdown-content{
+			display: block;
+
+		 }
+
+		 .dropdown:hover .dropbtn {
+			background-color: #3e8e3e;
+		 }
+		
+		
+		
+         h1 {font-family: courier;
+			font-weight: bolder;
+			font-size: 30px;
+			color: #f1f1f1;
+			text-align: center;
+			text-decoration: none;
+			padding: 1%;
+			margin-top:1px;
+			margin-left: 10%;
+			margin-right: 10%;
+			
+		}
+        .container{
+            width:100%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            border-radius: 10px;
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 300px;
+            margin-left: 700px;
+            margin-right: 10px;
+    }
+         form h3{
+            color:#3e8e3e;
+            font-weight: 800;
+            margin-bottom: 20px;
+         }
+         form input, form textarea{
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background-color: #16f5733a;
+            font-size: 10px;
+         }
+         form button{
+            padding: 15px;
+            background: rgb(20, 85, 7);
+            color: #16f56c;
+            font-size: 18px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+         }
+
+		</style>
+		</head>
+	<body>
+		
+	       
+		<div class="dropdown" style="float:right;">
+			<button class="dropbtn">Kim-Portfolio</button>
+			<div class="dropdown-content" style="right: 0;">
+				 <a href="https://drive.google.com/drive/folders/1v3Uwhe_fsBqfgZam5wwL4hWypu8Iz9g_">WEEK 1</a>
+				<a href="https://drive.google.com/drive/folders/17ypKS8sdl_JvLDLyN6ZKNuXs6dEhFWN6">WEEK 2</a>
+				 <a href="https://drive.google.com/drive/folders/1u1Q6-K8tMzhTJF86-5129WB2z3-FhYpB">WEEK 3</a>
+				<a href="https://drive.google.com/drive/folders/1VjO0Tv83NWPIN1Nxk-9PRFqvDTcjdRiS">WEEK 4</a>
+			</div>
+		</div>
+
+		<ul type="none">  
+		<li> <a href="file:///C:/Users/user/Desktop/kkkkkkk/about.html">About</a></li>
+		<li> <a href="file:///C:/Users/user/Desktop/kkkkkkk/video.html">Video</a></li>
+		<li class="text"> <a href="file:///C:/Users/user/Desktop/kkkkkkk/contact.html">Contacts</a></li>
+		<li> <a href="file:///C:/Users/user/Desktop/kkkkkkk/sign%20up.html">sign up</a></li>
+		<li> <a href="file:///C:/Users/user/Desktop/kkkkkkk/services.html">Services</a></li>
+		<li> <a href="file:///C:/Users/user/Desktop/kkkkkkk/gallary.html">Gallery</a></li>
+		<li> <a href="file:///C:/Users/user/Desktop/kkkkkkk/index.html">Home</a></li>
+		
+		</ul>
+
+        <div class="container"></div>
+        <form onsubmit="sendEmail()"; reset(); return false;>
+            <h3>CONTUCT US</h3>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="contact no." required>    
+            <textarea id="message"  rows="4" placeholer="How can we help you"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "kmbrlyrmrz006@GMAIL.COMSS",
+            Password : "@#kmbrlyrmrz0000",
+            To : 'fbdkimmay16gmail.com',
+            From : document.getElementById('email').value,
+           Subject : "New contact form Enquiry",
+        Body : "Name: " + document.getElementById("Name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> phone: " + document.getElementById("contact no.").value
+        + "<br> message: " + document.getElementById("message").value
+}).then(
+  message => alert("message set Successfully")
+);
+        }
+    </script>
+
+
+    </body>
+    </html>
